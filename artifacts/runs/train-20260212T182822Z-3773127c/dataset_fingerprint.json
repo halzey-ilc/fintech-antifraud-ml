@@ -1,0 +1,26 @@
+{
+  "cols": 17,
+  "columns": [
+    "event_time",
+    "transaction_id",
+    "customer_id",
+    "merchant_id",
+    "device_id",
+    "amount",
+    "currency",
+    "mcc",
+    "country",
+    "channel",
+    "is_international",
+    "is_card_present",
+    "merchant_risk_score",
+    "customer_risk_score",
+    "velocity_1h",
+    "velocity_24h",
+    "label"
+  ],
+  "created_utc": "2026-02-12T18:28:35.865889+00:00",
+  "raw_csv": "C:\\Users\\abdyl\\fintech-antifraud-ml\\data\\raw\\transactions.csv",
+  "raw_csv_sha256": "9cf7cf472cfc0c7c8dc3d0fee2f6abf03e3ae7d076df8c7c5ec4f7bbe11ba4b6",
+  "rows": 10000
+}

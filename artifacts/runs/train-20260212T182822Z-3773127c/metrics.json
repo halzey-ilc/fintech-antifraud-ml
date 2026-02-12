@@ -1,0 +1,26 @@
+{
+  "baseline_profile_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\baseline_profile.json",
+  "data": {
+    "cols": 17,
+    "label_column": "label",
+    "rows": 10000
+  },
+  "explainability_report_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\explainability_train.json",
+  "model_selection_report_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\model_selection.json",
+  "quality_report_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\data_quality_train.json",
+  "run_id": "train-20260212T182822Z-3773127c",
+  "selected_model": {
+    "kind": "logreg",
+    "model_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\model.joblib"
+  },
+  "split": {
+    "group_column": "customer_id",
+    "strategy": "time_group",
+    "test_groups": 186,
+    "test_pos_rate": 0.11964107676969092,
+    "test_rows": 2006,
+    "time_column": "event_time",
+    "train_pos_rate": 0.12021516137102826,
+    "train_rows": 7994
+  }
+}

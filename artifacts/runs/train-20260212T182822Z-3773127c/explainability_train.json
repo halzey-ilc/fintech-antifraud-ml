@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-02-12T18:28:35.863405+00:00",
+  "report": {
+    "features_total": 16,
+    "max_rows": 20000,
+    "method": "permutation_importance",
+    "n_repeats": 10,
+    "rows_used": 2006,
+    "scoring": "average_precision",
+    "top_features": [
+      {
+        "feature": "amount",
+        "importance_mean": 0.15697519649662306,
+        "importance_std": 0.004117183563493503
+      },
+      {
+        "feature": "is_card_present",
+        "importance_mean": 0.022916429386852954,
+        "importance_std": 0.0023940270218141494
+      },
+      {
+        "feature": "customer_risk_score",
+        "importance_mean": 0.022370822266969726,
+        "importance_std": 0.003476915635857412
+      },
+      {
+        "feature": "is_international",
+        "importance_mean": 0.014814405615975823,
+        "importance_std": 0.00895888158517721
+      },
+      {
+        "feature": "merchant_risk_score",
+        "importance_mean": 0.008322247210774531,
+        "importance_std": 0.0031723083993965063
+      },
+      {
+        "feature": "channel",
+        "importance_mean": 0.0012291360377332194,
+        "importance_std": 0.001093236803379477
+      },
+      {
+        "feature": "currency",
+        "importance_mean": 0.0009716222110129791,
+        "importance_std": 0.003778310641848735
+      },
+      {
+        "feature": "country",
+        "importance_mean": 0.000963097412969205,
+        "importance_std": 0.0025766780072303836
+      },
+      {
+        "feature": "device_id",
+        "importance_mean": 0.0007479407463763188,
+        "importance_std": 0.00043752271208587885
+      },
+      {
+        "feature": "velocity_24h",
+        "importance_mean": 0.00013078294741966645,
+        "importance_std": 0.0022197812202511
+      },
+      {
+        "feature": "customer_id",
+        "importance_mean": 0.0001243525453118788,
+        "importance_std": 0.0003622461634954434
+      },
+      {
+        "feature": "transaction_id",
+        "importance_mean": 0.0,
+        "importance_std": 0.0
+      },
+      {
+        "feature": "event_time",
+        "importance_mean": -2.905347538932346e-05,
+        "importance_std": 6.421013811551097e-05
+      },
+      {
+        "feature": "velocity_1h",
+        "importance_mean": -5.124721800230936e-05,
+        "importance_std": 0.0010105936284139627
+      },
+      {
+        "feature": "mcc",
+        "importance_mean": -0.00047853986771068666,
+        "importance_std": 0.0018077877700448414
+      },
+      {
+        "feature": "merchant_id",
+        "importance_mean": -0.0011049647266626827,
+        "importance_std": 0.002540071762146959
+      }
+    ],
+    "top_k": 30
+  },
+  "selected_model": {
+    "kind": "logreg",
+    "model_path": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T182822Z-3773127c\\model.joblib"
+  },
+  "split": {
+    "group_column": "customer_id",
+    "strategy": "time_group",
+    "test_groups": 186,
+    "test_pos_rate": 0.11964107676969092,
+    "test_rows": 2006,
+    "time_column": "event_time",
+    "train_pos_rate": 0.12021516137102826,
+    "train_rows": 7994
+  }
+}

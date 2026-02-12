@@ -1,0 +1,63 @@
+app:
+  name: "fintech-antifraud-ml"
+  environment: "dev"
+
+paths:
+  raw_csv: "data/raw/transactions.csv"
+  eval_csv: "data/processed/eval.csv"
+  artifacts_dir: "artifacts"
+
+data:
+  label_column: "label"
+  test_size: 0.2
+  random_seed: 42
+  min_rows: 1000
+  split_strategy: "time"
+  time_column: "event_time"
+  group_column: "customer_id"
+
+model:
+  candidates:
+    - "logreg"
+    - "hgb"
+  calibration:
+    method: "sigmoid"
+    cv: 3
+  selection:
+    objective: "expected_cost"
+
+training:
+  max_iter: 2000
+  n_jobs: 1
+
+evaluation:
+  thresholds:
+    - 0.05
+    - 0.10
+    - 0.20
+    - 0.30
+    - 0.40
+    - 0.50
+
+drift:
+  psi:
+    warn: 0.10
+    alert: 0.25
+    bins: 10
+    min_non_null: 200
+    max_cardinality: 100
+  ks:
+    pvalue_warn: 0.05
+    pvalue_alert: 0.01
+    min_non_null: 200
+
+cost:
+  fp: 1.0
+  fn: 10.0
+  grid_size: 201
+
+explainability:
+  scoring: "average_precision"
+  n_repeats: 10
+  top_k: 30
+  max_rows: 20000

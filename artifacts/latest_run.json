@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-02-12T18:30:57.103631+00:00",
+  "run_dir": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts\\runs\\train-20260212T183043Z-ed83e740",
+  "run_id": "train-20260212T183043Z-ed83e740",
+  "run_type": "train",
+  "selected_model_kind": "logreg"
+}

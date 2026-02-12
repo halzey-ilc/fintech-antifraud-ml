@@ -1,0 +1,83 @@
+{
+  "app": {
+    "environment": "dev",
+    "name": "fintech-antifraud-ml"
+  },
+  "artifacts_dir": "C:\\Users\\abdyl\\fintech-antifraud-ml\\artifacts",
+  "config_snapshot": {
+    "app": {
+      "environment": "dev",
+      "name": "fintech-antifraud-ml"
+    },
+    "cost": {
+      "fn": 10.0,
+      "fp": 1.0,
+      "grid_size": 201
+    },
+    "data": {
+      "group_column": "customer_id",
+      "label_column": "label",
+      "min_rows": 1000,
+      "random_seed": 42,
+      "split_strategy": "time",
+      "test_size": 0.2,
+      "time_column": "event_time"
+    },
+    "drift": {
+      "ks": {
+        "min_non_null": 200,
+        "pvalue_alert": 0.01,
+        "pvalue_warn": 0.05
+      },
+      "psi": {
+        "alert": 0.25,
+        "bins": 10,
+        "max_cardinality": 100,
+        "min_non_null": 200,
+        "warn": 0.1
+      }
+    },
+    "evaluation": {
+      "thresholds": [
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ]
+    },
+    "explainability": {
+      "max_rows": 20000,
+      "n_repeats": 10,
+      "scoring": "average_precision",
+      "top_k": 30
+    },
+    "model": {
+      "calibration": {
+        "cv": 3,
+        "method": "sigmoid"
+      },
+      "candidates": [
+        "logreg",
+        "hgb"
+      ],
+      "selection": {
+        "objective": "expected_cost"
+      }
+    },
+    "paths": {
+      "artifacts_dir": "artifacts",
+      "eval_csv": "data/processed/eval.csv",
+      "raw_csv": "data/raw/transactions.csv"
+    },
+    "training": {
+      "max_iter": 2000,
+      "n_jobs": 1
+    }
+  },
+  "created_utc": "2026-02-12T18:30:57.103631+00:00",
+  "project_root": "C:\\Users\\abdyl\\fintech-antifraud-ml",
+  "run_id": "train-20260212T183043Z-ed83e740",
+  "run_type": "train"
+}
